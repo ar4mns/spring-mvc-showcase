@@ -39,7 +39,6 @@ public class CallableControllerTests extends AbstractContextControllerTests {
 			.andExpect(status().isOk())
 			.andExpect(content().contentType("text/plain;charset=ISO-8859-1"))
 			.andExpect(content().string("Callable result"));
-			org.junit.Assert.fail();
 	}
 
 	@Test
@@ -54,8 +53,6 @@ public class CallableControllerTests extends AbstractContextControllerTests {
 			.andExpect(forwardedUrl("/WEB-INF/views/views/html.jsp"))
 			.andExpect(model().attribute("foo", "bar"))
 			.andExpect(model().attribute("fruit", "apple"));
-		
-		Esto no compila!!!!
 	}
 
 	@Test
